@@ -9,7 +9,7 @@
 
 <body>
     <header>
-        <img id="logo" src="logo.svg" alt="Logo der schweizerischen Eidgenossenschaft" />
+        <img id="logo" src="elements/logo.svg" alt="Logo der schweizerischen Eidgenossenschaft" />
         <p id="department">Eidgenössisches Departement für <br />
             Umwelt, Verkehr, Energie und Kommunikation UVEK <br /><br />
             <strong>Bundesamt für Verkehr BAV</strong><br />Abteilung Sicherheit</p>
@@ -135,19 +135,37 @@
                 <td>Kein weiterer Handlungsbedarf</td>
             </tr>
         </table> 
-                 
-        <h2>Kartenauszug aus dem Kataster der belasteten Standorte des Bundesamtes für Verkehr (KbS BAV)</h2>
-        <table id="karten_info">
-            <tr>
-                <th>Standort</th>
-                <td>B077 Betriebsstandort 077</td>
-            </tr>
-            <tr>
-                <th>Gemeinde</th>
-                <td>Ecublens (VD)</td>
-            </tr>
-        </table>
-        <img id="map" src="/image.png" alt="the map cannot be displayed" />
+        <div id="no_break">         
+            <h2>Kartenauszug aus dem Kataster der belasteten Standorte des Bundesamtes für Verkehr (KbS BAV)</h2>
+            <table id="karten_info">
+                <tr>
+                    <th>Standort</th>
+                    <td>B077 Betriebsstandort 077</td>
+                </tr>
+                <tr>
+                    <th>Gemeinde</th>
+                    <td>Ecublens (VD)</td>
+                </tr>
+            </table>
+
+            <figure id="kartenauszug">
+                <img src="elements/map.png" alt="Platzhalter Karte" />
+                <figcaption>
+                    <h3>Legende</h3>
+                    <figure class="legend">
+                        <img id="perimeter" src="elements/legend_perimeter.png" />
+                        <figcaption>Perimeter des Standortes</figcaption>
+                    </figure>
+
+                    <figure id="meter" class="legend">
+                        <img src="elements/legend_meter.png" />
+                        <figcaption>Meter</figcaption>
+                    </figure>
+                </figcaption>
+                <p>Hinweis: <br /> Die dargestellten Hintergrunddaten haben nur informativen Charakter. Sie dienen ausschliesslich der besseren Lokalisierung des Standortes.</p>
+            <footer> &#169; 2011 Bundesamt für Verkehr BAV, swisstopo</footer>
+            </figure>
+        </div>
     </section>
 
     <section id="daten_fuer_inhaber">
