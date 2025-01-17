@@ -1,0 +1,83 @@
+@page {
+    size: A4;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    margin: 2cm;
+  }
+
+@page {
+    @bottom-right {
+        content: "Seite "counter(page);
+    }
+    @bottom-left {
+        content: "KbS BAV: Standortdatenblatt BAV intern, erstellt am 15.01.25";
+    }
+    @top-right {
+        content: "B077 Betriebsstandort 077";
+    }
+}
+
+@media print {
+    p {
+        widows: 4;
+        orphans: 4;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 18px;
+}
+
+h2, h3 {
+    border-bottom-style: solid;
+}
+
+h2 {
+    font-size: 15px;
+    border-width: 2.1px;
+    page-break-after: avoid;
+}
+
+h3 {
+    border-width: 1px;
+    font-style: italic;
+    font-size: 13px;
+    page-break-after: avoid;
+}
+
+p, th, td {
+    font-size: 12px;
+}
+
+#logo {
+    width: 6cm;
+    padding-right: 1cm;
+}
+
+#department {
+    padding-left: 1cm;
+    font-size: 11px;
+    width: 8cm;
+    display: inline-block;
+}
+
+table {
+    page-break-inside: avoid;
+}
+
+table tr th:first-child, tbody tr td:first-child {
+  width: 18em;
+  min-width: 18em;
+  max-width: 18em;
+  word-break:normal;
+}
+
+th, td {
+    text-align: left;
+    padding-right: 0.5cm;
+    vertical-align: top;
+}
